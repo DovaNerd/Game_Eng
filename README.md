@@ -1,1 +1,3 @@
 # Game_Eng
+
+This project we had to design a simple level that may or may not be for our GDW game I intend to make a simple level where the player traveses it from one end to the other I want to include one simple ai that will trigger when the player walks into its range I also want to script the victory conditions. I have chosen and I have chosen to focus on scripts.
