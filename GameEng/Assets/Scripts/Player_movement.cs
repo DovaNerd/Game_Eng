@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player_movement : MonoBehaviour
 {
@@ -38,7 +39,29 @@ public class Player_movement : MonoBehaviour
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
         }
 
+
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
     }
+
+    private void OnCollisionEnter(UnityEngine.Collision collision)
+    {
+        //Destroy(gameObject);
+        //This is what to do if the object we collide with has a certain tag and what to do
+        if (collision.gameObject.name == "OOB")
+        {
+            SceneManager.LoadScene(0);
+        }
+
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.tag == "Win")
+        {
+            SceneManager.LoadScene(1);
+        }
+    }
+
 }
