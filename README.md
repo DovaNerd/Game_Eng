@@ -12,3 +12,7 @@ Simple Ai code
 
 https://www.youtube.com/watch?v=xppompv1DBg
 
+Collision detection
+
+https://docs.unity3d.com/ScriptReference/Collision-gameObject.html
+
