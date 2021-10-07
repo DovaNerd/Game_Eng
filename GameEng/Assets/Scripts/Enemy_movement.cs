@@ -10,7 +10,6 @@ public class Enemy_movement : MonoBehaviour
     Transform target;
     NavMeshAgent agent;
 
-
     void Start()
     {
         target = Player_manager.instance.player.transform;
